@@ -16,7 +16,7 @@ html {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -73,4 +73,37 @@ a {
             }
         }
     }
+}
+
+.link-btn-pink {
+    display: block;
+    padding: 15px 45px;
+    background-color: #F1CDB3;
+    border-radius: 100px;
+    font-family: $g-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.link-btn-transparent {
+    display: block;
+    padding: 15px 45px;
+    background-color: transparent;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    font-family: $g-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+}
+
+.link-btn-pink:hover, .link-btn-transparent:hover {
+    background-color: #FDDCC4;
 }
