@@ -1,7 +1,76 @@
-// font-family: 'Arimo', sans-serif;
-// font-family: 'Gelasio', serif;
+$a-font: 'Arimo', sans-serif;
+$g-font: 'Gelasio', serif;
+
+@mixin g-text() {
+    font-family: $g-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;    
+}
+
 
 html {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-logo-title {
+    padding-bottom: 7px;
+    font-family: $g-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+}
+
+.header-logo-subtitle {
+    font-family: $a-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.header-nav {
+
+    .header-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-menu-item{
+            
+            .header-menu-item-link {
+                font-family: $a-font;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 160%;
+            }
+        }
+    }
+}
