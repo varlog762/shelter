@@ -144,4 +144,75 @@ $g-font: 'Gelasio', serif;
             }
         }
     }
+
+    .our-friends {
+        padding: 80px 0 100px 0;
+        background-color: #F6F6F6;
+
+        .our-friends-title {
+            text-align: center;
+            padding-bottom: 53px;
+        }
+
+        .our-friends-container {
+            margin-bottom: 55px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .button-left {
+                width: 52px;
+                height: 52px;
+                // margin-right: 53px;
+                border: 2px solid #F1CDB3;
+                border-radius: 100%;
+                background: transparent url('../../assets/icons/arrow-left.svg') no-repeat center center;
+                transition: all .2s;
+            }
+
+            .button-right {
+                width: 52px;
+                height: 52px;
+                // margin-left: 53px;
+                border: 2px solid #F1CDB3;
+                border-radius: 100%;
+                background: transparent url('../../assets/icons/arrow-right.svg') no-repeat center center;
+                transition: all .2s;
+            }
+
+            .button-left:hover {
+                background: #FDDCC4 url('../../assets/icons/arrow-left.svg') no-repeat center center;
+            }
+
+            .button-right:hover {
+                background: #FDDCC4 url('../../assets/icons/arrow-right.svg') no-repeat center center;
+            }
+
+            .our-friends-cards-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .our-friends-card {
+                    width: 270px;
+                    margin-right: 90px;
+
+                    .our-friends-card-link {
+                        margin: 0 38px 30px 38px;
+                    }
+                }
+
+                .our-friends-card:last-child {
+                    margin-right: 0;
+                }
+            }
+
+        }
+
+        .our-friends-link {
+            width: 173px;
+            margin: 0 auto;
+        }
+    }
 }

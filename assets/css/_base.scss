@@ -92,6 +92,7 @@ a {
 .link-btn-transparent {
     display: block;
     padding: 15px 45px;
+    margin: 0 auto;
     background-color: transparent;
     border: 2px solid #F1CDB3;
     border-radius: 100px;
@@ -102,6 +103,7 @@ a {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
+    text-align: center;
 }
 
 .link-btn-pink:hover, .link-btn-transparent:hover {
@@ -116,4 +118,32 @@ a {
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #545454;    
+}
+
+.pet-card {
+    background-color: #FAFAFA;
+    border-radius: 9px;
+    overflow: hidden;
+
+    .pet-card-pic {
+        margin-bottom: 30px;
+    }
+
+    .pet-card-name {
+        margin-bottom: 30px;
+        font-family: $g-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        color: #545454;
+        text-align: center;
+        
+    }
+}
+
+.pet-card:hover {
+    background-color: #FFF;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
