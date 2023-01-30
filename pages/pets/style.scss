@@ -1,0 +1,58 @@
+@use '../../assets/css/base';
+
+.pets-header {
+    background: #FFF;
+
+    .pets-header-container {
+        padding: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .pets-header-logo-wrapper {
+
+            .pets-header-logo-title {
+                color: #545454;
+            }
+
+            .pets-header-logo-subtitle {
+                color: #292929;
+            }
+        }
+
+        .pets-header-nav {
+
+            .pets-header-menu {
+
+                .pets-header-menu-item {
+                    padding-right: 35px;
+
+                    .pets-header-menu-item-link {
+                        color: #545454;
+                    }
+
+                    // .pets-header-menu-item-link:first-child {
+                    //     padding-bottom: 6px;
+                    //     color: #FAFAFA;
+                    //     border-bottom: 3px solid #F1CDB3;
+                    // }
+
+                    .pets-header-menu-item-link:active {
+                        padding-bottom: 6px;
+                        color: #292929;
+                        border-bottom: 3px solid #F1CDB3;
+                    }
+
+                    .pets-header-menu-item-link:hover {
+                        color: #292929;
+                    }
+                }
+
+                .pets-header-menu-item:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+}
