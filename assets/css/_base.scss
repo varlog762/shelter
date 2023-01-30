@@ -120,6 +120,16 @@ a {
     color: #545454;    
 }
 
+.h4-title {
+    font-family: $g-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
 .pet-card {
     background-color: #FAFAFA;
     border-radius: 9px;
@@ -146,4 +156,96 @@ a {
 .pet-card:hover {
     background-color: #FFF;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.footer {
+    padding-top: 40px;
+    background: url('../../assets/images/bg.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #5B483A 0%, #262425 100%);
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+
+        .footer-questions {
+            margin-top: 16px;
+
+            .footer-questions-title {
+                margin-bottom: 40px;
+                color: #FFF;
+            }
+
+            .footer-questions-email {
+                position: relative;
+                margin-bottom: 40px;
+
+                .footer-questions-email-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .footer-questions-email-h4 {
+                    padding-top: 6px;
+                    padding-left: 60px;
+                }
+            }
+
+            .footer-questions-phone {
+                position: relative;
+
+                .footer-questions-phone-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .footer-questions-phone-h4 {
+                    padding-top: 6px;
+                    padding-left: 60px;
+                }
+            }
+        }
+
+        .footer-visit {
+            margin-top: 16px;
+
+            .footer-visit-title {
+                margin-bottom: 34px;
+                color: #FFF;
+            }
+
+            .footer-visit-address {
+                position: relative;
+                margin-bottom: 32px;
+
+                .footer-visit-address1-icon {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                }
+
+                .footer-visit-address1-h4 {
+                    padding-left: 42px;
+                }
+
+                .footer-visit-address2-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .footer-visit-address2-h4 {
+                    padding-left: 42px;
+                    padding-top: 6px;
+                }
+            }
+        }
+
+        .footer-pic {
+
+            .footer-pic-img {
+                height: 100%;
+            }
+        }
+    }
 }
