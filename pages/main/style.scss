@@ -215,4 +215,62 @@ $g-font: 'Gelasio', serif;
             margin: 0 auto;
         }
     }
+
+    .can-help {
+        padding: 80px 0 100px 0;
+        color: #FFF;
+        text-align: center;
+
+        .can-help-title {
+            margin: 0 auto;
+            margin-bottom: 60px;
+
+        }
+
+        .can-help-items-container {
+            min-height: 281px;
+            margin: 0 87px; 
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: start;
+
+            .can-help-item {
+                margin: 0 auto;
+                margin-right: 90px;
+
+                .can-help-item-pic {
+                    margin-bottom: 30px;
+                    
+                }
+
+                .can-help-item-pic-caption {
+                    font-family: $g-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+                    color: #545454;
+                }
+
+                
+            }
+
+            .can-help-item:first-child {
+                margin-left: 0;
+            }
+
+            .can-help-item:nth-child(5) {
+                margin-right: 0;
+            }
+
+            .can-help-item:nth-child(6) {
+                margin-left: 84px;
+            }
+
+            .can-help-item:last-child {
+                margin-right: 84px;
+            }
+        }
+    }
 }
