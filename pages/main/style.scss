@@ -164,7 +164,6 @@ $g-font: 'Gelasio', serif;
             .button-left {
                 width: 52px;
                 height: 52px;
-                // margin-right: 53px;
                 border: 2px solid #F1CDB3;
                 border-radius: 100%;
                 background: transparent url('../../assets/icons/arrow-left.svg') no-repeat center center;
@@ -174,7 +173,6 @@ $g-font: 'Gelasio', serif;
             .button-right {
                 width: 52px;
                 height: 52px;
-                // margin-left: 53px;
                 border: 2px solid #F1CDB3;
                 border-radius: 100%;
                 background: transparent url('../../assets/icons/arrow-right.svg') no-repeat center center;
@@ -270,6 +268,70 @@ $g-font: 'Gelasio', serif;
 
             .can-help-item:last-child {
                 margin-right: 84px;
+            }
+        }
+    }
+
+    .donation {
+        padding: 80px 0 100px 0;
+        background-color: #F6F6F6;
+
+        .donation-container {
+            padding: 0 140px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .donation-info {
+
+                .donation-info-title {
+                    margin-bottom: 20px;
+                }
+
+                .donation-info-bank {
+                    margin-bottom: 20px;
+                    font-family: $g-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 110%;
+                    letter-spacing: 0.06em;
+                    color: #545454;
+                }
+
+                .donation-info-bank-account {
+                    margin-bottom: 20px;                    width: 350px;
+                    position: relative;
+                    background-color: #F1CDB3;
+                    border-radius: 9px;
+
+                    .donation-info-card-pic {
+                        position: absolute;
+                        top: 10px;
+                        left: 15px;
+                    }
+
+                    .donation-info-card-num {
+                        padding: 10px 15px 10px 60px;
+                        font-family: $g-font;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 115%;
+                        letter-spacing: 0.06em;
+                        color: #545454;                        
+                    }
+                }
+
+                .donation-info-descr {
+                    width: 380px;
+                    font-family: $a-font;
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: #B2B2B2;
+                }
             }
         }
     }
