@@ -181,10 +181,12 @@ $g-font: 'Gelasio', serif;
 
             .button-left:hover {
                 background: #FDDCC4 url('../../assets/icons/arrow-left.svg') no-repeat center center;
+                cursor: pointer;
             }
 
             .button-right:hover {
                 background: #FDDCC4 url('../../assets/icons/arrow-right.svg') no-repeat center center;
+                cursor: pointer;
             }
 
             .our-friends-cards-container {
@@ -303,6 +305,7 @@ $g-font: 'Gelasio', serif;
                 }
 
                 .donation-info-bank-account {
+                    display: block;
                     margin-bottom: 20px;                    width: 350px;
                     position: relative;
                     background-color: #F1CDB3;
@@ -324,6 +327,10 @@ $g-font: 'Gelasio', serif;
                         letter-spacing: 0.06em;
                         color: #545454;                        
                     }
+                }
+
+                .donation-info-bank-account:hover {
+                    background: #FDDCC4;
                 }
 
                 .donation-info-descr {

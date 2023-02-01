@@ -1,5 +1,10 @@
 @use '../../assets/css/base';
 
+$a-font: 'Arimo',
+sans-serif;
+$g-font: 'Gelasio',
+serif;
+
 .pets-header {
     background: #FFF;
 
@@ -84,6 +89,21 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
+
+            .pets-our-friends-page-circle {
+                width: 52px;
+                height: 52px;
+                background: #F1CDB3;
+                border-radius: 100px;
+                font-family: $g-font;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 52px;
+                letter-spacing: 0.06em;
+                color: #292929;
+                text-align: center;
+            }
         }
     }
 }
