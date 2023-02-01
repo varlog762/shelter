@@ -1,5 +1,7 @@
-$a-font: 'Arimo', sans-serif;
-$g-font: 'Gelasio', serif;
+$a-font: 'Arimo',
+sans-serif;
+$g-font: 'Gelasio',
+serif;
 
 @mixin g-text() {
     font-family: $g-font;
@@ -8,7 +10,7 @@ $g-font: 'Gelasio', serif;
     font-size: 32px;
     line-height: 110%;
     letter-spacing: 0.06em;
-    color: #F1CDB3;    
+    color: #F1CDB3;
 }
 
 
@@ -16,7 +18,14 @@ html {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure {
     margin: 0;
     padding: 0;
 }
@@ -62,8 +71,8 @@ a {
         justify-content: space-between;
         align-items: center;
 
-        .header-menu-item{
-            
+        .header-menu-item {
+
             .header-menu-item-link {
                 font-family: $a-font;
                 font-style: normal;
@@ -75,9 +84,48 @@ a {
     }
 }
 
+.btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    border: none;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    background-color: transparent;
+    transition: all .3s;
+}
+
+.btn-pink {
+    background: #F1CDB3;
+}
+
+.btn-transparent {
+    border: 2px solid #F1CDB3;
+}
+
+.btn-inactive {
+    color: #CDCDCD;
+    border: 2px solid #CDCDCD;
+}
+
+.btn-pink:hover,
+.btn-transparent:hover {
+    background: #FDDCC4;
+    cursor: pointer;
+}
+
+.btn-pink:active {
+    background: #F1CDB3;
+}
+
 .link-btn-pink {
     display: block;
-    padding: 15px 45px;
+    padding: 13px 45px;
     background-color: #F1CDB3;
     border-radius: 100px;
     font-family: $g-font;
@@ -92,7 +140,7 @@ a {
 
 .link-btn-transparent {
     display: block;
-    padding: 15px 45px;
+    padding: 13px 45px;
     margin: 0 auto;
     background-color: transparent;
     border: 2px solid #F1CDB3;
@@ -108,7 +156,8 @@ a {
     transition: all .2s;
 }
 
-.link-btn-pink:hover, .link-btn-transparent:hover {
+.link-btn-pink:hover,
+.link-btn-transparent:hover {
     background-color: #FDDCC4;
 }
 
@@ -119,7 +168,7 @@ a {
     font-size: 35px;
     line-height: 130%;
     letter-spacing: 0.06em;
-    color: #545454;    
+    color: #545454;
 }
 
 .h4-title {
@@ -140,25 +189,31 @@ a {
     transition: all .2s;
 
     .pet-card-pic {
-        margin-bottom: 30px;
+        margin-bottom: 26px;
+
+        .pet-card-pic-img {
+            margin-bottom: 26px;
+        }
+
+        .pet-card-name {
+            margin-bottom: 30px;
+            font-family: $g-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.06em;
+            color: #545454;
+            text-align: center;
+        }
     }
 
-    .pet-card-name {
-        margin-bottom: 30px;
-        font-family: $g-font;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 23px;
-        letter-spacing: 0.06em;
-        color: #545454;
-        text-align: center;
-    }
 }
 
 .pet-card:hover {
     background-color: #FFF;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
 
     .pet-card-link {
         background-color: #FDDCC4;
@@ -249,6 +304,7 @@ a {
         }
 
         .footer-pic {
+            overflow: hidden;
 
             .footer-pic-img {
                 height: 100%;

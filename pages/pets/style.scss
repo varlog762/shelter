@@ -31,12 +31,6 @@
                         color: #545454;
                     }
 
-                    // .pets-header-menu-item-link:first-child {
-                    //     padding-bottom: 6px;
-                    //     color: #FAFAFA;
-                    //     border-bottom: 3px solid #F1CDB3;
-                    // }
-
                     .pets-header-menu-item-link:active {
                         padding-bottom: 6px;
                         color: #292929;
@@ -55,4 +49,41 @@
         }
     }
 
+}
+
+.pets-main {
+    background-color: #F6F6F6;
+    
+    .pets-our-friends {
+        
+        padding: 80px 0 100px 0;
+
+        .pets-our-friends-title {
+            margin: 0 auto;
+            margin-bottom: 85px;
+            text-align: center;
+        }
+
+        .pets-our-friends-cards-container {
+            margin-bottom: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .pets-our-friends-card {
+                margin-bottom: 30px;
+
+                .pets-our-friends-card-link {
+                    margin: 0 38px 30px 38px;
+                }
+            }
+        }
+
+        .pets-our-friends-btns-container {
+            width: 340px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
