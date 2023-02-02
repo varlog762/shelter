@@ -1,7 +1,9 @@
 @use '../../assets/css/base';
 
-$a-font: 'Arimo', sans-serif;
-$g-font: 'Gelasio', serif;
+$a-font: 'Arimo',
+sans-serif;
+$g-font: 'Gelasio',
+serif;
 
 .main-header {
     background: url('../../assets/images/bg.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #5B483A 0%, #262425 100%);
@@ -90,7 +92,7 @@ $g-font: 'Gelasio', serif;
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 160%;
-                    color: #CDCDCD;                   
+                    color: #CDCDCD;
                 }
 
                 .need-house-link {
@@ -101,6 +103,7 @@ $g-font: 'Gelasio', serif;
 
             .need-house-pic {
                 height: 100%;
+
                 .need-house-pic-img {
                     display: block;
                 }
@@ -115,7 +118,6 @@ $g-font: 'Gelasio', serif;
             margin: 80px 0 100px 0;
             padding: 0 175px;
             display: flex;
-            // flex-wrap: wrap;
 
             .about-pic {
                 margin-right: 120px;
@@ -228,8 +230,8 @@ $g-font: 'Gelasio', serif;
 
         .can-help-items-container {
             min-height: 281px;
-            margin: 0 87px; 
-            display: flex; 
+            margin: 0 87px;
+            display: flex;
             flex-wrap: wrap;
             justify-content: start;
 
@@ -239,7 +241,7 @@ $g-font: 'Gelasio', serif;
 
                 .can-help-item-pic {
                     margin-bottom: 26px;
-                    
+
                 }
 
                 .can-help-item-pic-caption {
@@ -252,7 +254,7 @@ $g-font: 'Gelasio', serif;
                     color: #545454;
                 }
 
-                
+
             }
 
             .can-help-item-mb {
@@ -306,7 +308,8 @@ $g-font: 'Gelasio', serif;
 
                 .donation-info-bank-account {
                     display: block;
-                    margin-bottom: 20px;                    width: 350px;
+                    margin-bottom: 20px;
+                    width: 350px;
                     position: relative;
                     background-color: #F1CDB3;
                     border-radius: 9px;
@@ -325,7 +328,7 @@ $g-font: 'Gelasio', serif;
                         font-size: 20px;
                         line-height: 115%;
                         letter-spacing: 0.06em;
-                        color: #545454;                        
+                        color: #545454;
                     }
                 }
 
@@ -341,6 +344,139 @@ $g-font: 'Gelasio', serif;
                     font-size: 12px;
                     line-height: 18px;
                     color: #B2B2B2;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) and (min-width: 768px) {
+
+    .main-header {
+
+        .main-header-container {
+            padding: 30px 0 60px 0;
+        }
+    }
+
+    .main {
+
+        .need-house {
+
+            .need-house-container {
+
+                .need-house-info {
+                    margin: 0 auto;
+                    margin-bottom: 100px;
+                    padding-top: 0;
+                    padding-right: 0;
+
+                    .need-house-link {
+                        margin: 0 auto;
+                    }
+                }
+
+                .need-house-pic {
+                    width: 569px;
+                    height: 593px;
+                    padding-left: 139px;
+
+                    .need-house-pic-img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .about {
+
+            .about-container {
+                flex-wrap: wrap-reverse;
+                padding: 0 138px;
+
+                .about-info {
+                    margin-bottom: 80px;
+                    padding: 0;
+                }
+
+                .about-pic {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .our-friends {
+
+            .our-friends-container {
+
+                .our-friends-cards-container  {
+
+                    .our-friends-card {
+                        margin-right: 0;
+                    }
+
+                    .our-friends-card:first-child {
+                        margin-right: 40px;
+                    }
+
+                    .our-friends-card:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .can-help {
+
+            .can-help-items-container {
+                margin: 0 39px;
+                justify-content: space-between;
+
+                .can-help-item {
+                    width: 170px;
+                    height: 113px;
+                    margin: 0;
+                    margin-right: 60px;
+                }
+                .can-help-item-mb {
+                    margin-bottom: 55px;
+                }
+    
+                .can-help-item:first-child {
+                    margin-left: 0;
+                }
+    
+                .can-help-item:nth-child(5) {
+                    margin-right: 60px;
+                }
+    
+                .can-help-item:nth-child(6) {
+                    margin-left: 0px;
+                }
+    
+                .can-help-item:last-child {
+                    margin-right: 60px;
+                }
+
+                .can-help-item:nth-child(3n) {
+                    margin-right: 0;
+                } 
+            }
+        }
+
+        .donation {
+
+            .donation-container {
+                padding: 0;
+                flex-wrap: wrap-reverse;
+
+                .donation-info {
+                    margin: 0 auto;
+                    margin-bottom: 60px;
+                }
+
+                .donation-pic {
+                    margin: 0 auto;
                 }
             }
         }
