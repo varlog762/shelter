@@ -163,6 +163,13 @@ serif;
             justify-content: space-between;
             align-items: center;
 
+            .our-friends-btns-container {
+
+                .button-left {
+                    display: none;
+                }
+            }
+
             .button-left {
                 width: 52px;
                 height: 52px;
@@ -225,7 +232,6 @@ serif;
         .can-help-title {
             margin: 0 auto;
             margin-bottom: 58px;
-
         }
 
         .can-help-items-container {
@@ -241,7 +247,6 @@ serif;
 
                 .can-help-item-pic {
                     margin-bottom: 26px;
-
                 }
 
                 .can-help-item-pic-caption {
@@ -406,7 +411,7 @@ serif;
         }
 
         .our-friends {
-
+            
             .our-friends-container {
 
                 .our-friends-cards-container  {
@@ -482,3 +487,245 @@ serif;
         }
     }
 }
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    .main-header {
+
+        .main-header-container {
+            padding: 30px 43px 60px 0;
+
+            .main-header-nav {
+
+                .main-header-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .main {
+
+        .need-house {
+
+            .need-house-container {
+
+                .need-house-info {
+                    margin: 0 auto;
+                    margin-bottom: 105px;
+                    padding-top: 0;
+                    padding-right: 0;
+
+                    .need-house-title {
+                        padding-bottom: 42px;
+                        font-size: 25px;
+                        text-align: center;
+                    }
+
+                    .need-house-descr {
+                        text-align: center;
+                    }
+
+                    .need-house-link {
+                        margin: 0 auto;
+                    }
+                }
+
+                .need-house-pic {
+                    width: 260px;
+                    height: 271px;
+                    padding-left: 40px;
+
+                    .need-house-pic-img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .about {
+
+            .about-container {
+                flex-wrap: wrap-reverse;
+                margin: 42px 0;
+                padding: 0;
+                text-align: center;
+
+                .about-info {
+                    margin-bottom: 40px;
+                    padding: 0;
+
+                    .about-title {
+                        padding-bottom: 25px;
+                    }
+
+                    .about-descr {
+                        text-align: justify;
+                        padding: 0 15px 22px 15px;
+                    }
+                }
+
+                .about-pic {
+                    width: 260px;
+                    height: 354px;
+                    margin: 0 auto;
+
+                    .about-pic-img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .our-friends {
+            padding: 42px 0;
+
+            .our-friends-title {
+                padding-bottom: 38px;
+
+            }
+
+            .our-friends-container {
+                margin-bottom: 45px;
+
+                .button-left {
+                    display: none;
+                }
+
+                .our-friends-btns-container {
+                    width: 100%;
+                    padding: 0 58px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+
+                    .button-left{
+                        display: block;
+                    }
+                }
+
+                .our-friends-cards-container  {
+
+                    .our-friends-card {
+                        margin: 0 15px 20px 15px;
+                    }
+
+                    .our-friends-card:nth-child(1n+2) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .can-help {
+            padding: 42px 0;
+
+            .can-help-title {
+                margin-bottom: 40px;
+            }
+
+            .can-help-items-container {
+                margin: 0 5px;
+                justify-content: space-between;
+
+                .can-help-item {
+                    width: 130px;
+                    height: 87px;
+                    margin: 0 0 30px 0;
+                    
+                    .can-help-item-pic {
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 18px;
+                    }
+
+                    .can-help-item-pic-caption {
+                        font-size: 15px;
+                    }
+                }
+                .can-help-item-mb {
+                    margin-bottom: 30px;
+                }
+    
+                .can-help-item:first-child {
+                    margin-left: 0;
+                }
+    
+                .can-help-item:nth-child(5) {
+                    margin-right: 0;
+                }
+    
+                .can-help-item:nth-child(6) {
+                    margin-left: 0;
+                }
+    
+                .can-help-item:last-child {
+                    margin: 0;
+                }
+
+                .can-help-item:nth-child(3n) {
+                    margin-right: 0;
+                } 
+            }
+        }
+
+        .donation {
+            padding: 45px 0;
+
+            .donation-container {
+                padding: 0;
+                flex-wrap: wrap-reverse;
+
+                .donation-info {
+                    padding: 0 10px;
+                    margin: 0 auto;
+                    margin-bottom: 42px;
+
+                    .donation-info-title {
+                        margin-bottom: 18px;
+                        text-align: center;
+                    }
+
+                    .donation-info-bank {
+                        margin-bottom: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 15px;
+                        line-height: 160%;
+                        color: #545454;
+                        letter-spacing: 0;                        
+                    }
+
+                    .donation-info-bank-account {
+                        width: 281px;
+                        height: 40px;
+                        padding-top: 5px;
+
+                        .donation-info-card-pic {
+                            top: 10px;
+                        }
+
+                        .donation-info-card-num {
+                            font-size: 15px;
+                        }
+                    }
+
+                    .donation-info-descr {
+                        width: 100%;
+                        text-align: justify;
+                    }
+                }
+
+                .donation-pic {
+                    width: 260px;
+                    height: 135px;
+                    margin: 0 auto;
+
+                    .donation-pic-img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+} 

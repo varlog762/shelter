@@ -233,6 +233,8 @@ a {
             margin-top: 16px;
 
             .footer-questions-title {
+                width: 280px;
+                height: 90px;
                 margin-bottom: 40px;
                 color: #FFF;
             }
@@ -273,6 +275,8 @@ a {
             margin-top: 16px;
 
             .footer-visit-title {
+                width: 270px;
+                height: 90px;
                 margin-bottom: 34px;
                 color: #FFF;
             }
@@ -288,6 +292,7 @@ a {
                 }
 
                 .footer-visit-address1-h4 {
+                    width: 300px;
                     padding-left: 42px;
                 }
 
@@ -334,6 +339,75 @@ a {
             }
 
             .footer-pic {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+
+    .wrapper {
+        max-width: 300px;
+    }
+
+    .h3-title {
+        font-size: 25px;
+    }
+
+    .footer {
+        padding-top: 30px;
+
+        .footer-container {
+            flex-wrap: wrap;
+
+            .footer-questions {
+                width: 100%;
+                margin: 0 11px 46px 11px;
+                text-align: center;
+
+                .footer-questions-title {
+                    height: 64px;
+                }
+
+                .footer-questions-email {
+                    margin: 0 13px 40px 13px;
+
+                }
+
+                .footer-questions-phone {
+                    margin: 0 19px 0 20px;
+                }
+            }
+
+            .footer-visit {
+                margin: 0 auto;
+                margin-bottom: 5px;
+                text-align: center;
+
+                .footer-visit-title {
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+
+                .footer-visit-address {
+                    margin-bottom: 38px;
+
+                    .footer-visit-address1-h4 {
+                        width: 258px;
+                        text-align: left;
+                    }
+
+                    .footer-visit-address2-h4 {
+                        text-align: left;
+                    } 
+                }
+            }
+
+            .footer-pic {
+                width: 260px;
+                height: 270px;
                 margin: 0 auto;
             }
         }
