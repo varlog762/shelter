@@ -105,3 +105,4 @@ const jennifer = {
     petsCollection.push(freddie);
     petsCollection.push(charly);
 
+console.log(petsCollection);

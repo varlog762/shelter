@@ -17,9 +17,9 @@
 
 <body>
     <header class="main-header">
-        <div class="wrapper">
+        <div class="wrapper wrapper--s">
             <div class="main-header-container">
-                <a href="../main/index.html">
+                <a href="../main/index.html" class="main-header__logo-link">
                     <div class="main-header-logo-wrapper">
                         <h1 class="main-header-logo-title header-logo-title">Cozy House</h1>
                         <h6 class="main-header-logo-subtitle header-logo-subtitle">Shelter for pets in Boston</h6>
@@ -28,7 +28,8 @@
                 <nav class="main-header-nav header-nav">
                     <ul class="main-header-menu header-menu">
                         <li class="main-header-menu-item header-menu-item">
-                            <a href="../main/index.html" class="main-header-menu-item-link header-menu-item-link main-header-menu-item-link-active">About
+                            <a href="../main/index.html"
+                                class="main-header-menu-item-link header-menu-item-link main-header-menu-item-link-active">About
                                 the shelter</a>
                         </li>
                         <li class="main-header-menu-item header-menu-item">
@@ -44,10 +45,37 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-burger main-burger">
+                <div class="header-burger main-burger header__burger-button--not-active" id="burger-button">
                     <span class="burger-line burger-line-first"></span>
                     <span class="burger-line burger-line-second"></span>
                     <span class="burger-line burger-line-third"></span>
+                </div>
+                <div class="header__burger-menu-container">
+                    <div class="header__burger-menu">
+                        <a href="../main/index.html" class="main-header__burger-logo-link">
+                            <div class="main-header-logo-wrapper header-burger-logo header-logo">
+                                <div class="main-header-logo-title header-logo-title">Cozy House</div>
+                                <h6 class="main-header-logo-subtitle header-logo-subtitle">Shelter for pets in Boston</h6>
+                            </div>
+                        </a>
+                        <nav class="main-header-burger-nav header-nav">
+                            <ul class="main-header-burger-menu-list">
+                                <li class="burger-menu-item">
+                                    <a href="../main/index.html"
+                                        class="burger-menu-item-link burger-menu-item-link-active">About the shelter</a>
+                                </li>
+                                <li class="burger-menu-item">
+                                    <a href="../pets/index.html" class="burger-menu-item-link test">Our pets</a>
+                                </li>
+                                <li class="burger-menu-item">
+                                    <a href="#help" class="burger-menu-item-link">Help the shelter</a>
+                                </li>
+                                <li class="burger-menu-item">
+                                    <a href="#contacts" class="burger-menu-item-link">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,11 +210,11 @@
                         <img src="/assets/images/donation-dog.png" alt="Dog photo" class="donation-pic-img">
                     </div>
                     <div class="donation-info">
-                        <div class="donation-info-title h3-title">You can also<br> make a donation</div>
+                        <h3 class="donation-info-title h3-title">You can also<br> make a donation</h3>
                         <div class="donation-info-bank">Name of the bank / Type of bank account</div>
                         <a href="#!" class="donation-info-bank-account">
                             <img src="/assets/icons/credit-card.svg" alt="Card logo"
-                                class="donation-info-card-pic"></img>
+                                class="donation-info-card-pic">
                             <div class="donation-info-card-num">8380 2880 8028 8791 7435</div>
                         </a>
                         <div class="donation-info-descr">Legal information and lorem ipsum dolor sit amet, consectetur

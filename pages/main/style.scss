@@ -9,10 +9,16 @@ serif;
     background: url('../../assets/images/bg.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #5B483A 0%, #262425 100%);
 
     .main-header-container {
+        position: relative;
         padding: 60px 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        .main-header__logo-link--invisible {
+            opacity: 0;
+            pointer-events: none;
+        }
 
         .main-header-logo-wrapper {
 
@@ -58,8 +64,50 @@ serif;
                 }
             }
         }
-    }
 
+        .header__burger-menu-container {
+
+            .header__burger-menu {
+
+                .main-header-burger-nav {
+
+                    .main-header-burger-menu-list {
+                        padding: 0;
+                        margin: 0 38px;
+
+                        .burger-menu-item {
+                            text-align: center;
+                            margin-bottom: 40px;
+
+                            .burger-menu-item-link {
+                                font-family: $a-font;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 32px;
+                                line-height: 160%;
+                                color: #CDCDCD;
+                            }
+
+                            .burger-menu-item-link:hover {
+                                color: #FAFAFA;
+                            }
+
+                            .burger-menu-item-link:active {
+                                color: #FAFAFA;
+                                border-bottom: 3px solid #F1CDB3;
+                            }
+
+                            .burger-menu-item-link-active {
+                                padding-bottom: 6px;
+                                color: #FAFAFA;
+                                border-bottom: 3px solid #F1CDB3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .main {
@@ -411,10 +459,10 @@ serif;
         }
 
         .our-friends {
-            
+
             .our-friends-container {
 
-                .our-friends-cards-container  {
+                .our-friends-cards-container {
 
                     .our-friends-card {
                         margin-right: 0;
@@ -443,29 +491,30 @@ serif;
                     margin: 0;
                     margin-right: 60px;
                 }
+
                 .can-help-item-mb {
                     margin-bottom: 55px;
                 }
-    
+
                 .can-help-item:first-child {
                     margin-left: 0;
                 }
-    
+
                 .can-help-item:nth-child(5) {
                     margin-right: 60px;
                 }
-    
+
                 .can-help-item:nth-child(6) {
                     margin-left: 0px;
                 }
-    
+
                 .can-help-item:last-child {
                     margin-right: 60px;
                 }
 
                 .can-help-item:nth-child(3n) {
                     margin-right: 0;
-                } 
+                }
             }
         }
 
@@ -492,13 +541,11 @@ serif;
     .main-header {
 
         .main-header-container {
-            padding: 30px 43px 60px 0;
+            padding: 30px 0 60px 0;
+            width: 100%;
 
             .main-header-nav {
-
-                .main-header-menu {
-                    display: none;
-                }
+                display: none;
             }
 
             .main-burger {
@@ -605,12 +652,12 @@ serif;
                     flex-wrap: nowrap;
                     justify-content: space-between;
 
-                    .button-left{
+                    .button-left {
                         display: block;
                     }
                 }
 
-                .our-friends-cards-container  {
+                .our-friends-cards-container {
 
                     .our-friends-card {
                         margin: 0 15px 20px 15px;
@@ -638,7 +685,7 @@ serif;
                     width: 130px;
                     height: 87px;
                     margin: 0 0 30px 0;
-                    
+
                     .can-help-item-pic {
                         width: 50px;
                         height: 50px;
@@ -649,29 +696,30 @@ serif;
                         font-size: 15px;
                     }
                 }
+
                 .can-help-item-mb {
                     margin-bottom: 30px;
                 }
-    
+
                 .can-help-item:first-child {
                     margin-left: 0;
                 }
-    
+
                 .can-help-item:nth-child(5) {
                     margin-right: 0;
                 }
-    
+
                 .can-help-item:nth-child(6) {
                     margin-left: 0;
                 }
-    
+
                 .can-help-item:last-child {
                     margin: 0;
                 }
 
                 .can-help-item:nth-child(3n) {
                     margin-right: 0;
-                } 
+                }
             }
         }
 
@@ -699,7 +747,7 @@ serif;
                         font-size: 15px;
                         line-height: 160%;
                         color: #545454;
-                        letter-spacing: 0;                        
+                        letter-spacing: 0;
                     }
 
                     .donation-info-bank-account {
@@ -734,4 +782,4 @@ serif;
             }
         }
     }
-} 
+}
