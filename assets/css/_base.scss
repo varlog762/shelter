@@ -81,6 +81,11 @@ a {
     margin: 0 auto;
 }
 
+.header__logo-link--invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .header-logo-title {
     padding-bottom: 7px;
     font-family: $g-font;
@@ -175,14 +180,33 @@ a {
         right: 0;
         width: 320px;
         height: 100%;
-        background-color: #292929;
-        color: #FFF;
-        z-index: 1;
 
         .header-burger-logo {
             width: 190px;
             height: 60px;
             margin: 33px 0 158px 10px;
+        }
+
+        .header-burger-menu-list {
+            padding: 0;
+            margin: 0 38px;
+
+            .burger-menu-item {
+                text-align: center;
+                margin-bottom: 40px;
+
+                .burger-menu-item-link {
+                    font-family: $a-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 32px;
+                    line-height: 160%;
+                }
+
+                .burger-menu-item-link-active {
+                    padding-bottom: 6px;
+                }
+            }
         }
     }
 }

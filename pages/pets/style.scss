@@ -70,7 +70,7 @@ serif;
 
 .pets-main {
     background-color: #F6F6F6;
-    
+
     .pets-our-friends {
         padding: 80px 0 100px 0;
 
@@ -145,12 +145,52 @@ serif;
     .pets-header {
 
         .pets-header-container {
-            padding: 30px 50px 30px 0;
+            padding: 30px 0 30px 0;
 
             .pets-header-nav {
 
                 .pets-header-menu {
                     display: none;
+                }
+            }
+
+            .pets-header__burger-menu {
+                background-color: #FFF;
+
+                .pets-burger-logo-wrapper {
+
+                    .pets-burger-logo-title {
+                        color: #545454;
+                    }
+
+                    .pets-burger-logo-subtitle {
+                        color: #292929;
+                    }
+                }
+
+                .pets-header-burger-menu-list {
+
+                    .pets-burger-menu-item {
+
+                        .pets-burger-menu-item-link {
+                            color: #545454;
+                        }
+
+                        .pets-burger-menu-item-link:hover {
+                            color: #292929;
+                        }
+
+                        .pets-burger-menu-item-link:active {
+                            color: #292929;
+                            border-bottom: 3px solid #F1CDB3;
+                        }
+
+                        .pets-burger-menu-item-link-active {
+                            padding-bottom: 6px;
+                            color: #292929;
+                            border-bottom: 3px solid #F1CDB3;
+                        }
+                    }
                 }
             }
         }

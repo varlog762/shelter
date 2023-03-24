@@ -17,14 +17,14 @@
 
 <body>
     <header class="pets-header">
-        <div class="wrapper">
+        <div class="wrapper wrapper--s">
             <div class="pets-header-container">
-                <a href="../main/index.html">
-                    <div class="pets-header-logo-wrapper">
+                <div class="pets-header-logo-wrapper">
+                    <a href="../main/index.html" class="header__logo-link">
                         <h1 class="pets-header-logo-title header-logo-title">Cozy House</h1>
                         <h6 class="pets-header-logo-subtitle header-logo-subtitle">Shelter for pets in Boston</h6>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 <nav class="pets-header-nav header-nav">
                     <ul class="pets-header-menu header-menu">
                         <li class="pets-header-menu-item header-menu-item">
@@ -45,13 +45,39 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="header-burger pets-burger">
+                <div class="header-burger pets-burger" id="pets-burger-button">
                     <span class="burger-line burger-line_first"></span>
                     <span class="burger-line burger-line_second"></span>
                     <span class="burger-line burger-line_third"></span>
                 </div>
                 <div class="header__burger-menu-container">
-                    <div class="header__burger-menu"></div>
+                    <div class="pets-header__burger-menu header__burger-menu">
+                        <div class="pets-burger-logo-wrapper header-burger-logo header-logo">
+                            <a href="../main/index.html" class="main-header__burger-logo-link">
+                                <div class="pets-burger-logo-title header-logo-title">Cozy House</div>
+                                <h6 class="pets-burger-logo-subtitle header-logo-subtitle">Shelter for pets in Boston
+                                </h6>
+                            </a>
+                        </div>
+                        </a>
+                        <nav class="main-header-burger-nav header-nav">
+                            <ul class="pets-header-burger-menu-list header-burger-menu-list">
+                                <li class="burger-menu-item pets-burger-menu-item">
+                                    <a href="../main/index.html" class="burger-menu-item-link pets-burger-menu-item-link">About the shelter</a>
+                                </li>
+                                <li class="burger-menu-item pets-burger-menu-item">
+                                    <a href="../pets/index.html"
+                                        class="burger-menu-item-link pets-burger-menu-item-link pets-burger-menu-item-link-active">Our pets</a>
+                                </li>
+                                <li class="burger-menu-item pets-burger-menu-item">
+                                    <a href="#help" class="burger-menu-item-link pets-burger-menu-item-link">Help the shelter</a>
+                                </li>
+                                <li class="burger-menu-item pets-burger-menu-item">
+                                    <a href="#contacts" class="burger-menu-item-link pets-burger-menu-item-link">Contacts</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,7 +223,7 @@
         </div>
     </footer>
     <script src="../../assets/js/pets.js"></script>
-    <script src="script.js"></script>
+    <script src="../../assets/js/script.js"></script>
 </body>
 
 </html>

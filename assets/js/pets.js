@@ -96,6 +96,90 @@ const jennifer = {
         "parasites": ["lice", "fleas"]
     };
 
+    august = {
+        "name": "August",
+        "img": "../../assets/images/august.png",
+        "type": "Cat",
+        "breed": "Sphynx",
+        "description": "August is a unique Sphinx cat with no fur and big ears. He's playful and affectionate, and loves to cuddle up on laps to keep warm.",
+        "age": "4 years",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
+    duke = {
+        "name": "Duke",
+        "img": "../../assets/images/duke.png",
+        "type": "Dog",
+        "breed": "Boxer",
+        "description": "Duke is a loyal and protective Boxer with a heart of gold. He's great with kids and loves to play, but is also fiercely protective of his family.",
+        "age": "1 years 4 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
+    coco = {
+        "name": "Coco",
+        "img": "../../assets/images/coco.png",
+        "type": "Dog",
+        "breed": "French Bulldog",
+        "description": "Coco is a lovable French Bulldog with a personality as big as her ears. She's always up for a game of tug-of-war or a snuggle on the couch, and her wrinkly face never fails to make her owners smile.",
+        "age": "2 years 6 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
+    luna = {
+        "name": "Luna",
+        "img": "../../assets/images/luna.png",
+        "type": "Cat",
+        "breed": "Siamese cat",
+        "description": "Luna is a beautiful Siamese cat with striking blue eyes and a playful personality. She loves to cuddle up on laps and has a talent for getting into mischief.",
+        "age": "2 years 3 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
+    simba = {
+        "name": "Simba",
+        "img": "../../assets/images/simba.png",
+        "type": "Cat",
+        "breed": "Bengal cat",
+        "description": "Simba is a regal Bengal cat with a coat of leopard-like spots and a playful nature. He loves to climb and explore, and has a talent for hunting down anything that moves.",
+        "age": "2 years 3 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
+    rocky = {
+        "name": "Rocky",
+        "img": "../../assets/images/rocky.png",
+        "type": "Dog",
+        "breed": "Rottweiler",
+        "description": "Rocky is a powerful Rottweiler with a heart of gold. Despite his size and strength, he is a gentle giant who is great with kids and loves to play fetch.",
+        "age": "2 years 3 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
+    sassy = {
+        "name": "Sassy",
+        "img": "../../assets/images/sassy.png",
+        "type": "Cat",
+        "breed": "Abyssinian cat",
+        "description": "Sassy is a curious and energetic Abyssinian cat with a sleek and shiny coat. She's always on the go and loves to explore, but also enjoys snuggling up with her humans.",
+        "age": "3 years 3 months",
+        "inoculations": ["panleukopenia"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+    },
+
     petsCollection.push(jennifer);
     petsCollection.push(sophia);
     petsCollection.push(woody);
@@ -104,5 +188,12 @@ const jennifer = {
     petsCollection.push(timmy);
     petsCollection.push(freddie);
     petsCollection.push(charly);
+    petsCollection.push(august);
+    petsCollection.push(duke);
+    petsCollection.push(coco);
+    petsCollection.push(luna);
+    petsCollection.push(simba);
+    petsCollection.push(rocky);
+    petsCollection.push(sassy);
 
-console.log(petsCollection);
+console.log(petsCollection.length, petsCollection);
