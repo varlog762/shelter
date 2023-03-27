@@ -14,6 +14,7 @@ serif;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        overflow: hidden;
 
         .main-header-logo-wrapper {
 
@@ -61,6 +62,7 @@ serif;
         }
 
         .header__burger-menu-container {
+            overflow: hidden;
 
             .main-header__burger-menu {
                 background-color: #292929;
@@ -236,24 +238,31 @@ serif;
                 cursor: pointer;
             }
 
-            .our-friends-cards-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+            .our-friends-carousel-container {
+                width: 990px;
+                overflow: hidden;
 
-                .our-friends-card {
-                    margin-right: 90px;
+                .our-friends-carousel-line {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 6390px;
+                    display: flex;
+                    transition: all .5s;
 
-                    .our-friends-card-link {
-                        margin: 0 38px 30px 38px;
+                    .our-friends-card {
+                        margin-right: 90px;
+    
+                        .our-friends-card-link {
+                            margin: 0 38px 30px 38px;
+                        }
+                    }
+    
+                    .our-friends-card:last-child {
+                        margin-right: 0;
                     }
                 }
-
-                .our-friends-card:last-child {
-                    margin-right: 0;
-                }
             }
-
         }
 
         .our-friends-link {
@@ -452,18 +461,23 @@ serif;
 
             .our-friends-container {
 
-                .our-friends-cards-container {
+                .our-friends-carousel-container {
+                    width: 580px;
 
-                    .our-friends-card {
-                        margin-right: 0;
-                    }
+                    .our-friends-carousel-line {
+                        min-width: 55800px;
 
-                    .our-friends-card:first-child {
-                        margin-right: 40px;
-                    }
-
-                    .our-friends-card:last-child {
-                        display: none;
+                        .our-friends-card {
+                            margin-right: 40px;
+                        }
+    
+                        // .our-friends-card:first-child {
+                        //     margin-right: 40px;
+                        // }
+    
+                        // .our-friends-card:last-child {
+                        //     display: none;
+                        // }
                     }
                 }
             }
@@ -647,15 +661,16 @@ serif;
                     }
                 }
 
-                .our-friends-cards-container {
+                .our-friends-carousel-container {
+                    max-width: 300px;
 
-                    .our-friends-card {
-                        margin: 0 15px 20px 15px;
-                    }
+                    .our-friends-carousel-line {
+                        min-width: 4860px;
 
-                    .our-friends-card:nth-child(1n+2) {
-                        display: none;
-                    }
+                        .our-friends-card {
+                            margin: 0 15px 20px 15px;
+                        }
+                    }                    
                 }
             }
         }

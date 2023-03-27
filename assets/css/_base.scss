@@ -173,6 +173,7 @@ a {
     background-color: rgba(41, 41, 41, 0);
     transform: translateY(-100%);
     transition: all 1s;
+    overflow: hidden;
 
     .header__burger-menu {
         position: absolute;
