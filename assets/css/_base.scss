@@ -18,6 +18,7 @@ serif;
         transform: translateY(-100%);
         background-color: rgba(41, 41, 41, 0);
     }
+
     to {
         transform: translateY(0);
         background-color: rgba(41, 41, 41, 0.6);
@@ -29,6 +30,7 @@ serif;
         transform: translateY(0);
         background-color: rgba(41, 41, 41, 0.6);
     }
+
     to {
         transform: translateY(-100%);
         background-color: rgba(41, 41, 41, 0);
@@ -318,6 +320,7 @@ a {
 }
 
 .pet-card {
+    position: relative;
     width: 270px;
     background-color: #FAFAFA;
     border-radius: 9px;
@@ -327,8 +330,16 @@ a {
     .pet-card-pic {
         margin-bottom: 26px;
 
-        .pet-card-pic-img {
+        .pet-card-pic-img-container {
+            height: 270px;
             margin-bottom: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .pet-card-pic-img {
+                display: block;
+            }
         }
 
         .pet-card-name {
@@ -344,6 +355,128 @@ a {
         }
     }
 
+    .pet-card-popup-container {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(41, 41, 41, 0.6);
+        z-index: 2;
+
+        .pet-card-popup:hover {
+
+            .pet-card-popup-close-btn {
+                border: 2px solid #F1CDB3;
+                border-radius: 100%;
+                background: transparent url('../../assets/icons/close-icon.svg') no-repeat center center;
+            }
+        }
+
+        .pet-card-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 900px;
+            min-height: 500px;
+            background-color: #FAFAFA;
+            border-radius: 9px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            cursor: default;
+
+            .pet-card-popup-img-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 500px;
+                width: 500px;
+                overflow: hidden;
+                border-radius: 9px;
+
+                .pet-card-popup-img {
+                    display: block;
+                }
+            }
+
+            .pet-card-popup-descr-container {
+                padding: 50px 20px 0 29px;
+
+
+                .pet-card-popup-title {
+                    color: #000;
+                    margin-bottom: 10px;
+                }
+
+                .pet-card-popup-type {
+                    color: #000;
+                    margin-bottom: 40px;
+                }
+
+                .pet-card-popup-descr {
+                    max-width: 350px;
+                    font-family: $g-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 115%;
+                    letter-spacing: 0.06em;
+                    color: #000000;
+                    margin-bottom: 40px;
+                }
+
+                .pet-card-popup-property {
+                    margin-bottom: 10px;
+                    font-family: $g-font;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 115%;
+                    letter-spacing: 0.1em;
+                    color: #000000;
+                }
+
+                .pet-card-popup-property::before {
+                    content: "\2022";
+                    color: #F1CDB3;
+                    margin-right: 10px;
+                }
+            }
+
+            .pet-card-popup-close-btn {
+                position: absolute;
+                top: -52px;
+                right: -45px;
+                width: 52px;
+                height: 52px;
+                border: 2px solid #F1CDB3;
+                border-radius: 100%;
+                background: transparent url('../../assets/icons/close-icon.svg') no-repeat center center;
+                transition: all .2s;
+            }
+
+            .pet-card-popup-close-btn:hover {
+                background: #FDDCC4 url('../../assets/icons/close-icon.svg') no-repeat center center;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .pet-card-popup-container:hover {
+
+        .pet-card-popup-close-btn {
+            background: #FDDCC4 url('../../assets/icons/close-icon.svg') no-repeat center center;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .pet-card-popup-container-active {
+        display: block;
+    }
 }
 
 .pet-card:hover {

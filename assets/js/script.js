@@ -118,11 +118,15 @@ function createPetCard(pet) {
     petCardFigure.classList.add('our-friends-card-pic', 'pet-card-pic');
     petCard.append(petCardFigure);
 
+    const petCardFigureImgContainer = document.createElement('div');
+    petCardFigureImgContainer.classList.add('pet-card-pic-img-container');
+    petCardFigure.append(petCardFigureImgContainer);
+
     const petCardFigureImg = document.createElement('img');
-    petCardFigureImg.classList.add('our-friends-card-pic', 'pet-card-pic');
+    petCardFigureImg.classList.add('pet-card-pic-img');
     petCardFigureImg.setAttribute('src', pet.img);
     petCardFigureImg.setAttribute('alt', pet.name);
-    petCardFigure.append(petCardFigureImg);
+    petCardFigureImgContainer.append(petCardFigureImg);
 
     const petCardFigureCaption = document.createElement('figcaption');
     petCardFigureCaption.classList.add('our-friends-card-name', 'pet-card-name');
@@ -134,6 +138,68 @@ function createPetCard(pet) {
     petCardInformationBtn.setAttribute('href', '#!');
     petCardInformationBtn.innerHTML = 'Learn more';
     petCard.append(petCardInformationBtn);
+
+    const petCardPopupContainer = document.createElement('div');
+    petCardPopupContainer.classList.add('our-friends-card-popup-container', 'pet-card-popup-container');
+    petCard.append(petCardPopupContainer);
+
+    const petCardPopup = document.createElement('div');
+    petCardPopup.classList.add('our-friends-card-popup', 'pet-card-popup');
+    petCardPopupContainer.append(petCardPopup);
+
+    const petCardPopupImgContainer = document.createElement('div');
+    petCardPopupImgContainer.classList.add('our-friends-card-popup-img-container', 'pet-card-popup-img-container');
+    petCardPopup.append(petCardPopupImgContainer);
+
+    const petCardPopupImg = document.createElement('img');
+    petCardPopupImg.classList.add('our-friends-card-popup-img', 'pet-card-popup-img');
+    petCardPopupImg.setAttribute('src', pet['img-big']);
+    petCardPopupImg.setAttribute('alt', pet.name);
+    petCardPopupImgContainer.append(petCardPopupImg);
+
+    const petCardPopupDescrContainer = document.createElement('div');
+    petCardPopupDescrContainer.classList.add('our-friends-card-popup-descr-container', 'pet-card-popup-descr-container');
+    petCardPopup.append(petCardPopupDescrContainer);
+
+    const petCardPopupTitle = document.createElement('h3');
+    petCardPopupTitle.classList.add('our-friends-card-popup-title', 'pet-card-popup-title', 'h3-title');
+    petCardPopupTitle.innerHTML = pet.name;
+    petCardPopupDescrContainer.append(petCardPopupTitle);
+
+    const petCardPopupType = document.createElement('h4');
+    petCardPopupType.classList.add('our-friends-card-popup-type', 'pet-card-popup-type', 'h4-title');
+    petCardPopupType.innerHTML = `${pet.type} - ${pet.breed}`;
+    petCardPopupDescrContainer.append(petCardPopupType);
+
+    const petCardPopupDecr = document.createElement('p');
+    petCardPopupDecr.classList.add('our-friends-card-popup-descr', 'pet-card-popup-descr');
+    petCardPopupDecr.innerHTML = pet.description;
+    petCardPopupDescrContainer.append(petCardPopupDecr);
+
+    const petCardPopupAge = document.createElement('p');
+    petCardPopupAge.classList.add('our-friends-card-popup-age', 'pet-card-popup-age', 'pet-card-popup-property');
+    petCardPopupAge.innerHTML = `<b>Age: </b>${pet.age}`;
+    petCardPopupDescrContainer.append(petCardPopupAge);
+
+    const petCardPopupIno = document.createElement('p');
+    petCardPopupIno.classList.add('our-friends-card-popup-ino', 'pet-card-popup-ino', 'pet-card-popup-property');
+    petCardPopupIno.innerHTML = `<b>Inoculations: </b>${pet.inoculations}`;
+    petCardPopupDescrContainer.append(petCardPopupIno);
+
+    const petCardPopupDis = document.createElement('p');
+    petCardPopupDis.classList.add('our-friends-card-popup-diseases', 'pet-card-popup-diseases', 'pet-card-popup-property');
+    petCardPopupDis.innerHTML = `<b>Diseases: </b>${pet.diseases}`;
+    petCardPopupDescrContainer.append(petCardPopupDis);
+
+    const petCardPopupPar = document.createElement('p');
+    petCardPopupPar.classList.add('our-friends-card-popup-parasites', 'pet-card-popup-parasites', 'pet-card-popup-property');
+    petCardPopupPar.innerHTML = `<b>Parasites: </b>${pet.parasites}`;
+    petCardPopupDescrContainer.append(petCardPopupPar);
+
+    const petCardPopupCloseBtn = document.createElement('button');
+    petCardPopupCloseBtn.classList.add('pet-card-popup-close-btn');
+    petCardPopupCloseBtn.setAttribute('type', 'button');
+    petCardPopup.append(petCardPopupCloseBtn);
 
     return petCard;
 }
@@ -216,3 +282,34 @@ function showPrev() {
 
     petCarouselLine.style.left = shiftPosition + 'px';
 }
+
+//Show & Hide Popup
+
+const petsCardBtnsCollection = document.querySelectorAll('.pet-card-link'),
+    petCardPopupContainer = document.querySelector('.pet-card-popup-container'),
+    petsPopupCloseBtnsCollection = document.querySelectorAll('.pet-card-popup-close-btn');
+
+//Show Popup
+
+for (let button of petsCardBtnsCollection) {
+    button.addEventListener('click', (event) => {
+        event.target.nextElementSibling.classList.add('pet-card-popup-container-active');
+        document.body.classList.add('body-overflow-hidden');
+    });
+}
+
+//Hide Popup
+
+for (let button of petsPopupCloseBtnsCollection) {
+    button.addEventListener('click', (event) => {
+        event.target.closest('.pet-card-popup-container').classList.remove('pet-card-popup-container-active');
+        document.body.classList.remove('body-overflow-hidden');
+    });
+}
+
+petCardPopupContainer.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+        event.target.closest('.pet-card-popup-container').classList.remove('pet-card-popup-container-active');
+        document.body.classList.remove('body-overflow-hidden');
+    }
+})
