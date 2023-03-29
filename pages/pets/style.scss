@@ -82,16 +82,30 @@ serif;
 
         .pets-our-friends-cards-container {
             margin-bottom: 2px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            overflow: hidden;
+            margin-bottom: 45px;
 
-            .pets-our-friends-card {
-                margin-bottom: 30px;
 
-                .pets-our-friends-card-link {
-                    margin: 0 38px 30px 38px;
+            .pets-our-friends-cards-container-line {
+                display: flex;
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 120000px;
+                height: 930px;
+                transition: all .5s;
+
+                .pet-card-page {
+                    display: flex;
+                    justify-content: start;
+                    flex-wrap: wrap;
+                    width: 1280px;
+
+                    .pets-pet-card {
+                        margin: 15px 40px 15px 0;
+                    }
                 }
+
             }
         }
 
@@ -133,9 +147,9 @@ serif;
                 padding: 0 64px;
                 margin-bottom: 10px;
 
-                .pets-our-friends-card:nth-child(1n+7) {
-                    display: none;
-                }
+                // .pets-our-friends-card:nth-child(1n+7) {
+                //     display: none;
+                // }
             }
         }
     }
@@ -207,15 +221,14 @@ serif;
 
             .pets-our-friends-cards-container {
 
-
                 .pets-our-friends-card {
                     margin: 0 auto;
                     margin-bottom: 30px;
                 }
 
-                .pets-our-friends-card:nth-child(1n+4) {
-                    display: none;
-                }
+                // .pets-our-friends-card:nth-child(1n+4) {
+                //     display: none;
+                // }
             }
 
             .pets-our-friends-btns-container {
