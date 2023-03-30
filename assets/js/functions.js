@@ -45,12 +45,12 @@ export function random(multiplier) {
 /**
  * Creates a layout of cards on page load.
  */
-export function createPetsLayout(objCollection, multiplier, container) {
+export function createCardsLayout(objCollection, multiplier, container) {
     const fragment = document.createDocumentFragment(),
         line = [];
 
     while (line.length != multiplier) {
-        let randomNum = random(multiplier);
+        let randomNum = random(objCollection.length);
 
         if (!line.includes(randomNum)) {
             line.push(randomNum);
@@ -165,12 +165,12 @@ export function createPetCard(pet) {
 /**
  * Checks the number of the current page. If it's the first/second page, the function disables prevPage(firstPage)/*nextPage(lastPage) the buttons.
  */
-export function checkPageNumber(lastNum) {
+export function checkPageNumber(lastNumPage) {
     const buttonNextPage = document.getElementById('button-next-page'),
-    buttonLastPage = document.getElementById('button-last-page'),
-    buttonPrevPage = document.getElementById('button-prev-page'),
-    buttonFirstPage = document.getElementById('button-first-page'),
-    pageNumElem = document.querySelector('.pets-our-friends-page-circle');
+        buttonLastPage = document.getElementById('button-last-page'),
+        buttonPrevPage = document.getElementById('button-prev-page'),
+        buttonFirstPage = document.getElementById('button-first-page'),
+        pageNumElem = document.querySelector('.pets-our-friends-page-circle');
     if (+pageNumElem.innerHTML === 1) {
         buttonPrevPage.classList.remove('btn-transparent');
         buttonFirstPage.classList.remove('btn-transparent');
@@ -184,7 +184,7 @@ export function checkPageNumber(lastNum) {
         buttonFirstPage.disabled = true;
         buttonNextPage.disabled = false;
         buttonLastPage.disabled = false;
-    } else if (+pageNumElem.innerHTML === lastNum) {
+    } else if (+pageNumElem.innerHTML === lastNumPage) {
         buttonNextPage.classList.remove('btn-transparent');
         buttonLastPage.classList.remove('btn-transparent');
         buttonPrevPage.classList.remove('btn-inactive');
@@ -210,5 +210,32 @@ export function checkPageNumber(lastNum) {
         buttonLastPage.disabled = false;
         buttonPrevPage.disabled = false;
         buttonFirstPage.disabled = false;
+    }
+}
+
+export function createLayoutAfterPageLoad(collection, container) {
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth >= 1280) {
+        for (let i = 0; i < 6; i++) {
+            const page = document.createElement('div');
+            page.classList.add('pet-card-page');
+            createCardsLayout(collection, 8, page);
+            container.append(page);
+        }
+    } else if (windowWidth < 1280 && windowWidth >= 768) {
+        for (let i = 0; i < 8; i++) {
+            const page = document.createElement('div');
+            page.classList.add('pet-card-page');
+            createCardsLayout(collection, 6, page);
+            container.append(page);
+        }
+    } else if (windowWidth < 768) {
+        for (let i = 0; i < 16; i++) {
+            const page = document.createElement('div');
+            page.classList.add('pet-card-page');
+            createCardsLayout(collection, 3, page);
+            container.append(page);
+        }
     }
 }

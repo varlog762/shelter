@@ -6,8 +6,9 @@ import {
 import {
     burgerShowAndHide,
     hideBurgerWhenClickGrayArea,
-    createPetsLayout,
-    checkPageNumber
+    createCardsLayout,
+    checkPageNumber,
+    createLayoutAfterPageLoad
 } from "./functions.js";
 
 //Burger menu
@@ -42,49 +43,103 @@ const petsCardContainerLine = document.querySelector('.pets-our-friends-cards-co
 let shiftPosition = 0;
 
 
-//Resets the carousel when the screen is resized.
+//Resets the pagination when the screen is resized.
 window.onresize = function () {
     shiftPosition = 0;
     petsCardContainerLine.style.left = shiftPosition + 'px';
+    pageNumElem.innerHTML = 1;
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 1280) {
+        checkPageNumber(6);
+    } else if (windowWidth < 1280 && windowWidth >= 768) {
+        checkPageNumber(8);
+    } else if (windowWidth < 768) {
+        checkPageNumber(16);
+    }
 };
 
 buttonNextPage.addEventListener('click', () => {
-    shiftPosition -= 1280;
-    petsCardContainerLine.style.left = shiftPosition + 'px';
-    pageNumElem.innerHTML = +pageNumElem.innerHTML + 1;
-    checkPageNumber(8);
-    console.log(shiftPosition);
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 1280) {
+        shiftPosition -= 1280;
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = +pageNumElem.innerHTML + 1;
+        checkPageNumber(6);
+    } else if (windowWidth < 1280 && windowWidth >= 768) {
+        shiftPosition -= 620;
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = +pageNumElem.innerHTML + 1;
+        checkPageNumber(8);
+    } else if (windowWidth < 768) {
+        shiftPosition -= 270;
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = +pageNumElem.innerHTML + 1;
+        checkPageNumber(16);
+    }
+    
 });
 buttonPrevPage.addEventListener('click', () => {
-    shiftPosition += 1280;
-    petsCardContainerLine.style.left = shiftPosition + 'px';
-    pageNumElem.innerHTML = +pageNumElem.innerHTML - 1;
-    checkPageNumber(8);
-    console.log(shiftPosition);
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 1280) {
+        shiftPosition += 1280;
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = +pageNumElem.innerHTML - 1;
+        checkPageNumber(6);
+    } else if (windowWidth < 1280 && windowWidth >= 768) {
+        shiftPosition += 620;
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = +pageNumElem.innerHTML - 1;
+        checkPageNumber(8);
+    } else if (windowWidth < 768) {
+        shiftPosition += 270;
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = +pageNumElem.innerHTML - 1;
+        checkPageNumber(16);
+    }
 });
 
 buttonLastPage.addEventListener('click', () => {
-    shiftPosition -= ((8 - +pageNumElem.innerHTML) * 1280);
-    petsCardContainerLine.style.left = shiftPosition + 'px';
-    pageNumElem.innerHTML = 8;
-    checkPageNumber(8);
-    console.log(shiftPosition);
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 1280) {
+        shiftPosition -= ((6 - +pageNumElem.innerHTML) * 1280);
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = 6;
+        checkPageNumber(6);
+    } else if (windowWidth < 1280 && windowWidth >= 768) {
+        shiftPosition -= ((8 - +pageNumElem.innerHTML) * 620);
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = 8;
+        checkPageNumber(8);
+    } else if (windowWidth < 768) {
+        shiftPosition -= ((16 - +pageNumElem.innerHTML) * 270);
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = 16;
+        checkPageNumber(16);
+    }
+    
 })
 
 buttonFirstPage.addEventListener('click', () => {
-    shiftPosition += ((+pageNumElem.innerHTML - 1) * 1280);
-    petsCardContainerLine.style.left = shiftPosition + 'px';
-    pageNumElem.innerHTML = 1;
-    checkPageNumber(8);
-    console.log(shiftPosition);
+    const windowWidth = window.innerWidth;
+    if (windowWidth >= 1280) {
+        shiftPosition += ((+pageNumElem.innerHTML - 1) * 1280);
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = 1;
+        checkPageNumber(6);
+    } else if (windowWidth < 1280 && windowWidth >= 768) {
+        shiftPosition += ((+pageNumElem.innerHTML - 1) * 620);
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = 1;
+        checkPageNumber(8);
+    } else if (windowWidth < 768) {
+        shiftPosition += ((+pageNumElem.innerHTML - 1) * 270);
+        petsCardContainerLine.style.left = shiftPosition + 'px';
+        pageNumElem.innerHTML = 1;
+        checkPageNumber(16);
+    }
 })
 
-for (let i = 0; i < 8; i++) {
-    const page = document.createElement('div');
-    page.classList.add('pet-card-page');
-    createPetsLayout(petsCollection, 8, page);
-    petsCardContainerLine.append(page);
-}
+createLayoutAfterPageLoad(petsCollection, petsCardContainerLine);
 
 //Show & Hide Popup
 //
@@ -112,7 +167,6 @@ for (let button of petsPopupCloseBtnsCollection) {
 
 for (let petCardPopupContainer of petCardPopupContCollections) {
     petCardPopupContainer.addEventListener('click', (event) => {
-        console.log(event.target, event.currentTarget);
         if (event.target === event.currentTarget) {
             event.target.closest('.pet-card-popup-container').classList.remove('pet-card-popup-container-active');
             document.body.classList.remove('body-overflow-hidden');

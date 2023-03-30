@@ -6,7 +6,7 @@ import {
 import {
     burgerShowAndHide,
     hideBurgerWhenClickGrayArea,
-    createPetsLayout,
+    createCardsLayout,
     createPetCard
 } from "./functions.js";
 
@@ -38,7 +38,7 @@ const petCarouselLine = document.querySelector('.our-friends-carousel-line'),
 
 let shiftPosition = 0;
 
-createPetsLayout(petsCollection, petsCollection.length, petCarouselLine);
+createCardsLayout(petsCollection, petsCollection.length, petCarouselLine);
 
 //Resets the carousel when the screen is resized.
 window.onresize = function () {
@@ -77,7 +77,6 @@ for (let button of petsPopupCloseBtnsCollection) {
 
 for (let petCardPopupContainer of petCardPopupContCollections) {
     petCardPopupContainer.addEventListener('click', (event) => {
-        console.log(event.target, event.currentTarget);
         if (event.target === event.currentTarget) {
             event.target.closest('.pet-card-popup-container').classList.remove('pet-card-popup-container-active');
             document.body.classList.remove('body-overflow-hidden');
