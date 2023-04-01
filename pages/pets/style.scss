@@ -48,8 +48,16 @@ serif;
 
                     .pets-header-menu-item-link-active {
                         padding-bottom: 4px;
-                        color: #545454;
+                        color: #292929;
                         border-bottom: 3px solid #F1CDB3;
+                    }
+
+                    .pets-header-menu-item-link-active:hover {
+                        color: #292929;
+                    }
+
+                    .pets-header-menu-item-link-active:active {
+                        color: #292929;
                     }
                 }
 

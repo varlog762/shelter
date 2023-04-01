@@ -143,16 +143,18 @@ createLayoutAfterPageLoad(petsCollection, petsCardContainerLine);
 
 //Show & Hide Popup
 //
-const petsCardBtnsCollection = document.querySelectorAll('.pet-card-link'),
+const petsCardsCollection = document.querySelectorAll('.pet-card'),
     petCardPopupContCollections = document.querySelectorAll('.pet-card-popup-container'),
     petsPopupCloseBtnsCollection = document.querySelectorAll('.pet-card-popup-close-btn');
 
 //Show Popup
 
-for (let button of petsCardBtnsCollection) {
-    button.addEventListener('click', (event) => {
-        event.target.nextElementSibling.classList.add('pet-card-popup-container-active');
+for (let card of petsCardsCollection) {
+    card.addEventListener('click', (event) => {
+        // console.log(event.target);
+        event.currentTarget.lastElementChild.classList.add('pet-card-popup-container-active');
         document.body.classList.add('body-overflow-hidden');
+        
     });
 }
 
@@ -160,6 +162,7 @@ for (let button of petsCardBtnsCollection) {
 
 for (let button of petsPopupCloseBtnsCollection) {
     button.addEventListener('click', (event) => {
+        event.stopPropagation();
         event.target.closest('.pet-card-popup-container').classList.remove('pet-card-popup-container-active');
         document.body.classList.remove('body-overflow-hidden');
     });
@@ -167,6 +170,7 @@ for (let button of petsPopupCloseBtnsCollection) {
 
 for (let petCardPopupContainer of petCardPopupContCollections) {
     petCardPopupContainer.addEventListener('click', (event) => {
+        event.stopPropagation();
         if (event.target === event.currentTarget) {
             event.target.closest('.pet-card-popup-container').classList.remove('pet-card-popup-container-active');
             document.body.classList.remove('body-overflow-hidden');
